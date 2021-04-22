@@ -1,0 +1,37 @@
+{
+  "name": "oful",
+  "version": "1.0.0",
+  "description": "a research project.",
+  "app": "src/main/resources/apps/oful/components/page/page.min.js",
+  "targets": {
+    "app": {
+      "engines": {
+        "browsers": "> 0.25%"
+      }
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build ./src/main/resources/apps/oful/components/page/page.js --target app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/auniverseaway/oful.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/auniverseaway/oful/issues"
+  },
+  "homepage": "https://github.com/auniverseaway/oful#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "parcel": "^2.0.0-beta.2",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
