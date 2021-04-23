@@ -104,7 +104,7 @@ Sling-Initial-Content: apps/oful;overwrite:=true;uninstall:=true;path:=/apps/ofu
                     <slingUrl>http://localhost:8080/system/console</slingUrl>
                     <user>admin</user>
                     <password>admin</password>
-                </configuration>                
+                </configuration>
             </plugin>
         </plugins>
     </build>

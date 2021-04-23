@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import 'regenerator-runtime/runtime';
+import Head from '../head/head';
 
-const headRoot = document.head;
+import getObjectProperty from './utils/objectProperty';
+
+window.oful = {
+    components: {
+        page: {
+            head: Head,
+        }
+    }
+};
 
 const getPageProps = async () => {
     const { href } = window.location;
@@ -11,19 +20,10 @@ const getPageProps = async () => {
     return await propsRes.json();
 };
 
-const Head = (props) => {
-    return ReactDom.createPortal(props.children, headRoot);
-}
-
-const CreateHead = ({ title = 'No page title' }) => (
-    <Head>
-      <title>{title}</title>
-    </Head>
-  );
-
-const Page = (props) => {
+const Page = ({ children }) => {
+    const HeadComponent = getObjectProperty(children.head.ofulComponent);
     return(<>
-        <CreateHead title={props.children.head.props.title} />
+        <HeadComponent {...children.head.props} />
         <h1>Hello!</h1>
     </>);
 };

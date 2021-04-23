@@ -1,24 +1,24 @@
 {
     "jcr:primaryType": "nt:unstructured",
     "sling:resourceType":"oful/components/page",
-    "component": "oful.components.page",
+    "ofulComponent": "oful.components.page",
     "props": {
         "children": {
             "head": {
-                "component": "oful.components.page.head",
+                "ofulComponent": "oful.components.page.head",
                 "props": {
                     "title": "Adobe",
                     "description": "Adobe is changing the world."
                 }
             },
-            "body": {
-                "component": "oful.components.page.body",
+            "content": {
+                "ofulComponent": "oful.components.page.content",
                 "props": {
                     "children": {
                         "container": {
-                            "component": "oful.components.flex",
+                            "ofulComponent": "oful.components.flex",
                             "props": {
-                            "justifyContent": "space-between"
+                                "justifyContent": "space-between"
                             }
                         }
                     }
